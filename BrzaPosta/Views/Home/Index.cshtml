@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@if(ViewBag.id!=null)
+{
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Well done!</h4>
+    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+    <hr>
+    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy. @ViewBag.id</p>
+</div>
+}
+
+<!-- Uvodni slika i tekst -->
+<div class="row">
+    <div class="medium-6 columns medium-push-6">
+        <img class="thumbnail" src="~/source/bdl.jpg">
+    </div>
+    <div class="medium-6 columns medium-pull-6">
+        <h2>O nama</h2>
+        <p>Naš rad zasnovan je na pouzdanju, brzini i sigurnosti.</p>
+        <p>
+            Još od 90. godina prošlog stoljeća ispunjavamo vaše želje i potrebe. Zadovoljstvo mnogobrojnih kućanstava
+            i poduzeća se vidi na utiscima naših korisnika.
+            Iskustvo kroz dugi niz godina doprinosi usavršenju naše usluge.
+        </p>
+        <p>Naš transport ispunjava sve vaše zahtjeve, kontaktirajte nas te odlučite što želite, a brige su naše</p>
+        <p>Bez Vas naša usluga je bezsmislena, gradimo budućnost zajedno.</p>
+    </div>
+</div>
+<hr>
+
+<!-- Cjenik Menu  -->
+<div class="row">
+    <div class="row column text-center" id="cjenik">
+        <h1>Cjenik usluga</h1>
+    </div>
+
+    <div class="medium-4 columns">
+        <h3>XS Paket</h3>
+        <p>Cjena: 5,00 KM</p>
+        <img class="thumbnail" src="~/source/xs.png">
+    </div>
+
+    <div class="medium-4 columns">
+        <h3>S Paket</h3>
+        <p>Cjena: 9,00 KM</p>
+        <img class="thumbnail" src="~/source/s.png">
+    </div>
+
+    <div class="medium-4 columns">
+        <h3>M Paket</h3>
+        <p>Cjena: 13,50 KM</p>
+        <img class="thumbnail" src="~/source/m.png">
+    </div>
+
+    <div class="medium-4 columns">
+        <h3>L Paket</h3>
+        <p>Cjena: 18,00 KM</p>
+        <img class="thumbnail" src="~/source/l.png">
+    </div>
+
+    <div class="medium-4 columns">
+        <h3>XL Paket</h3>
+        <p>Cjena: 22,50 KM</p>
+        <img class="thumbnail" src="~/source/xl.png">
+    </div>
+
+    <div class="medium-4 columns">
+        <h3>XXL Paket</h3>
+        <p>Cjena: "ovisno po vaganju"</p>
+        <img class="thumbnail" src="~/source/xxl.png">
+    </div>
+</div>
+<hr>
+
+<link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<BrzaPosta.Models.Package>
+@{
+    ViewData["Title"] = "Tracking";
+}
+<form asp-controller="Package" asp-action="Details">
+    <p>
+        Tracking: <input type="text" name="id" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
+
+
+
