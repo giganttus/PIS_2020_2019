@@ -31,6 +31,7 @@ namespace BrzaPosta.Areas.Identity.Pages.Account.Manage
 
         public string Username { get; set; }
 
+        [Display(Name = "Email")]
         public string Email { get; set; }
 
         public bool IsEmailConfirmed { get; set; }
@@ -45,7 +46,7 @@ namespace BrzaPosta.Areas.Identity.Pages.Account.Manage
         {
             [Required]
             [EmailAddress]
-            [Display(Name = "New email")]
+            [Display(Name = "Novi email")]
             public string NewEmail { get; set; }
         }
 
@@ -67,7 +68,7 @@ namespace BrzaPosta.Areas.Identity.Pages.Account.Manage
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                return NotFound($"Nemoguće učitati korisnika kojem je ID '{_userManager.GetUserId(User)}'.");
             }
 
             await LoadAsync(user);
@@ -79,7 +80,7 @@ namespace BrzaPosta.Areas.Identity.Pages.Account.Manage
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                return NotFound($"Nemoguće učitati korisnika kojem je ID '{_userManager.GetUserId(User)}'.");
             }
 
             if (!ModelState.IsValid)
@@ -107,7 +108,7 @@ namespace BrzaPosta.Areas.Identity.Pages.Account.Manage
                 return RedirectToPage();
             }
 
-            StatusMessage = "Your email is unchanged.";
+            StatusMessage = "Vaš email nije promjenjen.";
             return RedirectToPage();
         }
 
@@ -116,7 +117,7 @@ namespace BrzaPosta.Areas.Identity.Pages.Account.Manage
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                return NotFound($"Nemoguće učitati korisnika kojem je ID '{_userManager.GetUserId(User)}'.");
             }
 
             if (!ModelState.IsValid)

@@ -22,6 +22,7 @@ namespace BrzaPosta.Areas.Identity.Pages.Account.Manage
             _signInManager = signInManager;
         }
 
+        [Display(Name = "Korisničko ime")]
         public string Username { get; set; }
 
         [TempData]

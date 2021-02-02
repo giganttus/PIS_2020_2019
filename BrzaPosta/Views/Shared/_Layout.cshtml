@@ -21,29 +21,29 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Početna</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Početna <i class="bi bi-house"></i></a>
                         </li>
                         @if ((await AuthorizationService.AuthorizeAsync(User, "superadmin")).Succeeded)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="Index">Ovlasti</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Role" asp-action="Index">Ovlasti <i class="bi bi-card-heading"></i></a>
                             </li>
                         }
                         @if ((await AuthorizationService.AuthorizeAsync(User, "DASA")).Succeeded)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Package" asp-action="Index">Pošiljke</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Package" asp-action="Index">Pošiljke <i class="bi bi-box-seam"></i></a>
                             </li>
                         }
                         @if ((await AuthorizationService.AuthorizeAsync(User, "korisnik")).Succeeded)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Package" asp-action="Create">Pošiljke</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Package" asp-action="Create">Pošiljke <i class="bi bi-box-seam"></i></a>
                             </li>
                         }
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Package" asp-action="Tracking">Tracking</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Package" asp-action="Tracking">Tracking <i class="bi bi-search"></i></a>
                         </li>
                     </ul>
                 </div>
