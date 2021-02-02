@@ -43,7 +43,8 @@ namespace BrzaPosta.Controllers
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (package == null)
             {
-                return NotFound();
+                var notExist = 1;
+                return RedirectToAction("Tracking", "Package", new { @varX = notExist });
             }
 
             return View(package);
@@ -160,9 +161,10 @@ namespace BrzaPosta.Controllers
         }
 
         [AllowAnonymous]
-        public IActionResult Tracking()
+        public IActionResult Tracking(int? varX)
         {
-             return View();
+            ViewBag.varX = varX;
+            return View();
         }
 
 

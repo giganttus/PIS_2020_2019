@@ -1,6 +1,7 @@
 ﻿@model IEnumerable<BrzaPosta.Models.Package>
 @{
     ViewData["Title"] = "Tracking";
+    
 }
 
 <div class="row">
@@ -10,6 +11,16 @@
     </div>
 </div>
 
+@if (ViewBag.varX != null)
+{
+    <div class="alert alert-danger alert-dismissible text-center" role="alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h4 class="alert-heading">Uneseni TC (tracking kod ne postoji)!</h4>
+        <p> Pokušajte ponovo.</p>
+        <hr>
+        <p class="mb-0">NAPOMENA: Kako bi pratili pošiljku zabilježite svoj unikatni TC</p>
+    </div>
+}
 
 <div class="row">
     <div class="col-md-6 offset-md-3 text-center">
