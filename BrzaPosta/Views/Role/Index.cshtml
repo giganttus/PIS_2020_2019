@@ -1,9 +1,9 @@
 ﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityRole>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Ovlasti";
 }
 
-<h3>Role</h3>
+<h3>Ovlasti</h3>
 
 <a asp-action="Create" class="btn btn-sm btn-primary">Dodaj</a>
 
@@ -15,7 +15,7 @@
                 <div class="input-group">
                     @Html.TextBox("search")
                     <div class="input-group-append">
-                        <button class="btn btn-primary" type="submit">Search</button>
+                        <button class="btn btn-primary" type="submit">Pretraži</button>
                     </div>
                 </div>
 
@@ -32,6 +32,7 @@
     <thead>
         <tr>
             <td>Naziv role</td>
+            <td>Upravljanje</td>
         </tr>
     </thead>
     <tbody>
@@ -42,10 +43,11 @@
                 <td>
                     <form asp-action="Delete" asp-route-id="@role.Id" method="post">
                         <button type="submit" class="btn btn-sm btn-danger">
-                            Izbriši
+                            Ukloni
                         </button>
                     </form>
-                    <a class="btn btn-sm btn-primary" asp-action="Update" asp-route-id="@role.Id">Dodaj</a>
+                    <br />
+                    <a class="btn btn-sm btn-primary" asp-action="Update" asp-route-id="@role.Id">Uredi</a>
                 </td>
             </tr>
 

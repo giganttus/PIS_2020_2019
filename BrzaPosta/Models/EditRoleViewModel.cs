@@ -14,6 +14,7 @@ namespace BrzaPosta.Models
         }
         public string Id { get; set; }
         [Required]
+        [Display(Name = "Naziv")]
         public string Name { get; set; }
 
         public List<string> Users { get; set; }

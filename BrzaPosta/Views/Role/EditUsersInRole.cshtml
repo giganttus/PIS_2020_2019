@@ -1,20 +1,24 @@
 ﻿@model List<UserRoleViewModel>
 
 @{
+    ViewData["Title"] = "Ovlasti";
     var roleId = ViewBag.roleId;
 }
-<p>
-    @using (Html.BeginForm("EditUsersInRole", "Role", FormMethod.Get))
-    {
-        @Html.Hidden("roleId")<input style="margin-left:4px;" hidden class="form-control" value="@roleId" />
-        <div class="input-group">
-            @Html.TextBox("search")
-            <div class="input-group-append">
-                <button class="btn btn-primary" type="submit">Pretraži</button>
+
+    <p>
+        @using (Html.BeginForm("EditUsersInRole", "Role", FormMethod.Get))
+        {
+            @Html.Hidden("roleId")<input style="margin-left:4px;" hidden class="form-control" value="@roleId" />
+            <div class="input-group">
+                @Html.TextBox("search")
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Pretraži</button>
+                </div>
             </div>
-        </div>
-    }
-</p>
+        }
+    </p>
+
+
 <form method="post">
     <div class="card">
         <div class="card-header">
@@ -34,10 +38,10 @@
             }
         </div>
         <div class="card-footer">
-            <input type="submit" value="Update" class="btn btn-primary"
+            <input type="submit" value="Ažuriraj" class="btn btn-primary"
                    style="width:auto" />
             <a asp-action="Update" asp-route-id="@roleId"
-               class="btn btn-primary" style="width:auto">Cancel</a>
+               class="btn btn-primary" style="width:auto">Odustani</a>
         </div>
     </div>
 </form>
