@@ -31,6 +31,7 @@ namespace BrzaPosta.Controllers
 
         // GET: Package/Details/5
         [Authorize(Policy = "ALL")]
+        [AllowAnonymous]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
