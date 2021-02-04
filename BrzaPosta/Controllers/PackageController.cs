@@ -24,9 +24,51 @@ namespace BrzaPosta.Controllers
 
         // GET: Package
         [Authorize(Policy = "DASA")]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? searchString, int? option)
         {
-            return View(await _context.Package.ToListAsync());
+            var package = from m in _context.Package
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {   
+                if(option == 1)
+                {
+                    package = package.Where(s => s.Name.Contains(searchString));
+                }
+                else if(option == 2)
+                {
+                    package = package.Where(s => s.LastName.Contains(searchString));
+
+                }
+                else if (option == 3)
+                {
+                    package = package.Where(s => s.Address.Contains(searchString));
+
+                }
+                else if (option == 4)
+                {
+                    package = package.Where(s => s.Name2.Contains(searchString));
+                }
+                else if (option == 5)
+                {
+                    package = package.Where(s => s.LastName2.Contains(searchString));
+
+                }
+                else if (option == 6)
+                {
+                    package = package.Where(s => s.Address2.Contains(searchString));
+
+                }
+                else if(option == 7)
+                {
+                    package = package.Where(s => s.Status.Contains(searchString));
+
+                }
+
+
+            }
+
+            return View(await package.ToListAsync());
         }
 
         // GET: Package/Details/5

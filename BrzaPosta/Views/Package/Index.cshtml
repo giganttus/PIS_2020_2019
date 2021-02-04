@@ -7,6 +7,38 @@
 
 <h1>Pošiljke</h1>
 
+   
+<form asp-controller="Package" asp-action="Index">
+    <div class="form-row">
+        
+        <div class="form-group col-md-3">
+            <input type="text" class="form-control" name="SearchString" placeholder="Unesite pojam pretrage" />
+        </div>
+
+        <div class="form-group col-md-3 offset-5">
+            <select class="form-control" name="option">
+                <option selected>Filter pretrage</option>
+                <option value="1">Ime pošiljatelja</option>
+                <option value="2">Prezime pošiljatelja </option>
+                <option value="3">Adresa pošiljatelja </option>
+                <option value="4">Ime primatelja</option>
+                <option value="5">Prezime primatelja </option>
+                <option value="6">Adresa primatelja </option>
+                <option value="7">Status pošiljke </option>
+            </select>
+        </div>
+
+        <div class="form-group col-md-1">
+            <input type="submit" class="btn btn-primary" value="Pretraži" />
+        </div>
+    </div>
+
+</form>
+    
+
+
+
+
 
 <table class="table">
     <thead>
