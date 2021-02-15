@@ -128,29 +128,29 @@ namespace BrzaPosta.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "5f6f7a6d-e7e3-4ca6-9377-5915e5cf22c7",
-                            ConcurrencyStamp = "b79cdcfc-a545-4c34-876b-265cf58a8c0c",
+                            Id = "96075747-8b25-498a-816e-48c97d5f6757",
+                            ConcurrencyStamp = "94ded74f-a9de-430a-b6db-f3e241e1a848",
                             Name = "Super Admin",
                             NormalizedName = "SUPER ADMIN"
                         },
                         new
                         {
-                            Id = "f2c2830b-92bd-4e2d-a298-20f274f9bd4b",
-                            ConcurrencyStamp = "a3b3390e-312f-474f-a323-e495d462cf5a",
+                            Id = "57fd2da2-6649-4bfb-a53a-d257093a5dd3",
+                            ConcurrencyStamp = "d9e3ce14-e71e-4fd7-af85-a250a00b5791",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "a36a87a3-627e-4b31-923d-562ed666218f",
-                            ConcurrencyStamp = "df03525e-ebd5-421a-8cf0-b89537eecae6",
+                            Id = "2a9c2373-3670-46aa-b45c-5a153eb8e9b0",
+                            ConcurrencyStamp = "16a1c17c-bc24-4564-97ca-458f0fcbb2f1",
                             Name = "Dostavljac",
                             NormalizedName = "DOSTAVLJAC"
                         },
                         new
                         {
-                            Id = "3876c7e2-12f2-4a60-af3e-e2de4237c399",
-                            ConcurrencyStamp = "3accd03d-19ef-4710-99a5-b2408e6fff0a",
+                            Id = "1a6b815e-ff19-4701-9795-7060c2574367",
+                            ConcurrencyStamp = "825bbce7-919d-44bc-b20a-02aa4a7ca592",
                             Name = "Korisnik",
                             NormalizedName = "KORISNIK"
                         });
