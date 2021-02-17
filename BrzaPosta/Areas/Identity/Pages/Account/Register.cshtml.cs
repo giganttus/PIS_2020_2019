@@ -61,7 +61,7 @@ namespace BrzaPosta.Areas.Identity.Pages.Account
 
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Compare("Password", ErrorMessage = "Lozinka i potvrda lozinke se ne podudaraju.")]
             public string ConfirmPassword { get; set; }
             public string Name { get; set; }
         }
